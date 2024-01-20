@@ -9,8 +9,8 @@ int add(stack_t *top)
 {
     if(top == NULL)
     {
-        printf("L<line_number>: can't add, stack too short\n");
-        exit(EXIT_FAILURE);
+        fprintf(stderr, "L: can't add, stack too short\n");
+	exit(EXIT_FAILURE);
     }
 
     stack_t *prev_el = top->prev;
